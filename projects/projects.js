@@ -1,0 +1,18 @@
+//Asigura ca s-a incarcat documentul
+document.addEventListener('DOMContentLoaded', () => {
+            
+            const profileMenu = document.getElementById('profile');
+            
+            if (profileMenu) {
+                profileMenu.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    profileMenu.classList.toggle('menu-open');
+                });
+            }
+
+            window.addEventListener('click', () => {
+                if (profileMenu && profileMenu.classList.contains('menu-open')) {
+                    profileMenu.classList.remove('menu-open');
+                }
+            });
+        });
