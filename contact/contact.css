@@ -223,7 +223,7 @@ form textarea:focus {
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 .contact-links a:hover {
