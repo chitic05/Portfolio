@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const cards = document.getElementsByClassName("project-card"); // nu ne da un array, ci un htmlcollection
             Array.from(cards).forEach(card => {  //convertim collectionul in array
-            card.classList.add("revealed");
+            card.classList.remove("revealed");
+
+            setTimeout(() => card.classList.add("revealed"), 10);
             });
 
             const profileMenu = document.getElementById('profile');
