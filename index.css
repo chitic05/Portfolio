@@ -31,7 +31,7 @@ body {
     grid-template-rows: auto 1fr auto; 
     min-height: 100vh; 
 
-    background-color:var(--color-main) ;
+    background-color:var(--color-main);
 }
 
 header {
@@ -65,7 +65,7 @@ header #profile-pic-container {
     border: 2px solid var(--color-section);
     overflow: hidden; 
 
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out, transform 0.2s ease-in-out; /*alta tranzitie cu timpi diferiti*/
 }
 
 header > #profile > #profile-pic-container > img {
@@ -144,6 +144,7 @@ main {
     align-items:center;
     padding: 2rem; 
 }
+
 main div{
     width: 60%;
     margin-bottom: 5%;
@@ -256,6 +257,41 @@ footer {
     opacity: 0.7;
 }
 
+@keyframes hfAppear {
+     0% {
+        opacity: 0.5;    
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+header, footer{
+    animation: hfAppear;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+} /*Animatie care modifica mai multe proprietati*/
+
+main div{
+    animation: appear;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
 
 @media (width < 1024px){
     header > .social-icons{

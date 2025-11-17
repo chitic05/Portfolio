@@ -61,7 +61,7 @@ header #profile-pic-container {
     border: 2px solid var(--color-section);
     overflow: hidden; 
 
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out, transform 0.2s ease-in-out;
 }
 
 header > #profile > #profile-pic-container > img {
@@ -151,6 +151,8 @@ main {
 }
 
 .project-card {
+    position:relative;
+    overflow: hidden;
     background-color: var(--color-secondary);
     padding: 1.5rem;
     border-radius: 12px;
@@ -161,6 +163,22 @@ main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transition: transform 0.2s, box-shadow 0.2s;
 }
+.project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    background: var(--color-main);
+    transform: translateY(0);
+    transition: transform 0.8s ease-out;
+    z-index: 10;
+}
+.project-card.revealed::after {
+    transform: translateY(100%);
+} /*Am folosit after-ul*/
+
 
 .project-card:hover {
     transform: scale(1.03);
@@ -235,6 +253,24 @@ footer {
 .footer-copyright {
     font-size: 0.8rem;
     opacity: 0.7;
+}
+
+@keyframes hfAppear {
+     0% {
+        opacity: 0.5;    
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+header, footer{
+    animation: hfAppear;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
 @media (max-width: 768px) {
