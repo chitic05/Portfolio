@@ -1,6 +1,6 @@
 //Asigura ca s-a incarcat documentul
 document.addEventListener('DOMContentLoaded', () => {
-            
+            // puteam sa fac cu un hover dar nu era placut
             const cards = document.getElementsByClassName("project-card"); // nu ne da un array, ci un htmlcollection
             Array.from(cards).forEach(card => {  //convertim collectionul in array
             card.classList.remove("revealed");
