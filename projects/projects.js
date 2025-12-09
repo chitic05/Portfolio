@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const projectsContainer = document.querySelector(".projects-container");
 
-    // Fetch the JSON data
-    fetch("cards.json") // Make sure this path matches your file name (projects.json vs cards.json)
+    fetch("cards.json") 
         .then((response) => response.json())
-        .then((data) => {
-            // 1. Clear existing content
+        .then((data) => {  //data este response.json()
             projectsContainer.innerHTML = "";
 
-            // 2. Create the cards
             data.cards.forEach((project) => {
                 const cardElement = document.createElement("div");
                 cardElement.classList.add("project-card");
