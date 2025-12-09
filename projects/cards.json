@@ -1,0 +1,28 @@
+{
+    "cards": [
+        {
+            "name": "2D Platformer Game",
+            "technologies": "C++, SDL3",
+            "description": "Designed using a clean, object-oriented architecture (entities, physics, rendering, input).\nImplemented reusable classes with clear separation of concerns for maintainable code.\nBuilt a JSON-based system for loading textures, levels, and game objects dynamically.\nCreated an extensible entity framework that allows adding new enemies, items, and mechanics without modifying core systems.",
+            "link": "https://github.com/chitic05/SDL3-game"
+        },
+        {
+            "name": "Spotify Extra Features App",
+            "technologies": "Python",
+            "description": "Added multiple features via the Spotify Web API.\nImplemented HTTPS requests for real-time interaction.",
+            "link": "https://github.com/chitic05/SpotifyExtraFeatures"
+        },
+        {
+            "name": "Bluetooth Controlled Mini Car",
+            "technologies": "ESP32, C++, Android Studio",
+            "description": "Designed & built a DC + servo motor minicar.\nCreated an Android app using Bluetooth SPP.\nProgrammed ESP32 to parse packets & control motors.",
+            "link": "https://github.com/chitic05/Embedded-Mini-Car"
+        },
+        {
+            "name": "Realtime Chat Application",
+            "technologies": "Rust, React",
+            "description": "Built a full-stack realtime chat platform.\nRust backend with scalable architecture.\nReact + Tailwind UI with live status & message rendering.\nWebSockets for instant communication.",
+            "link": "https://github.com/chitic05/Chat-App"
+        }
+    ]
+}

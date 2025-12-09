@@ -1,25 +1,61 @@
-//Asigura ca s-a incarcat documentul
 document.addEventListener('DOMContentLoaded', () => {
-            // puteam sa fac cu un hover dar nu era placut
-            const cards = document.getElementsByClassName("project-card"); // nu ne da un array, ci un htmlcollection
-            Array.from(cards).forEach(card => {  //convertim collectionul in array
-            card.classList.remove("revealed");
-            setTimeout(() => card.classList.add("revealed"), 10);
-            //am facut asta pentru ca broswerul pastreaza un cache si toate project card-urile
-            //vor avea clasa revealed mereu astfel nu se mai face animatia
+    const projectsContainer = document.querySelector(".projects-container");
+
+    // Fetch the JSON data
+    fetch("cards.json") // Make sure this path matches your file name (projects.json vs cards.json)
+        .then((response) => response.json())
+        .then((data) => {
+            // 1. Clear existing content
+            projectsContainer.innerHTML = "";
+
+            // 2. Create the cards
+            data.cards.forEach((project) => {
+                const cardElement = document.createElement("div");
+                cardElement.classList.add("project-card");
+                                
+                const descriptionListItems = project.description
+                    .split("\n")
+                    .map((line) => `<li>${line}</li>`)
+                    .join("");
+
+                cardElement.innerHTML = `
+                    <h3>${project.name}</h3>
+                    <p class="tech">${project.technologies}</p>
+                    <ul>${descriptionListItems}</ul>
+                    <a class="project-link" target="_blank" href="${project.link}">
+                        <i class="fa-brands fa-github"></i> GitHub Repository
+                    </a>
+                `;
+
+                projectsContainer.appendChild(cardElement);
             });
 
-            const profileMenu = document.getElementById('profile');
-            if (profileMenu) {
-                profileMenu.addEventListener('click', (event) => {
-                    event.stopPropagation();
-                    profileMenu.classList.toggle('menu-open');
-                });
-            }
-
-            window.addEventListener('click', () => {
-                if (profileMenu && profileMenu.classList.contains('menu-open')) {
-                    profileMenu.classList.remove('menu-open');
-                }
+        
+            const cards = document.querySelectorAll(".project-card");
+            
+            cards.forEach((card, index) => {
+                card.classList.remove("revealed");
+                //Timeout pentru a vedea ca e hidden astfel e efectul bun
+                setTimeout(() => {
+                    card.classList.add("revealed");
+                }, 10); 
             });
+
+        })
+        .catch((error) => console.error("Error loading projects:", error));
+
+    // Profile menu logic remains here (it works fine outside because the header is static)
+    const profileMenu = document.getElementById('profile');
+    if (profileMenu) {
+        profileMenu.addEventListener('click', (event) => {
+            event.stopPropagation();
+            profileMenu.classList.toggle('menu-open');
         });
+    }
+
+    window.addEventListener('click', () => {
+        if (profileMenu && profileMenu.classList.contains('menu-open')) {
+            profileMenu.classList.remove('menu-open');
+        }
+    });
+});
