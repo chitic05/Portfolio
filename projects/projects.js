@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const projectsContainer = document.querySelector(".projects-container");
 
+    // Ajax
     fetch("cards.json") 
         .then((response) => response.json())
         .then((data) => {  //data este response.json()
-            projectsContainer.innerHTML = "";
+            projectsContainer.innerHTML = ""; //modifica html-ul manual(direct)
 
             data.cards.forEach((project) => {
                 const cardElement = document.createElement("div");
