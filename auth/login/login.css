@@ -1,27 +1,23 @@
-/* Reset the body to be a simple flex container */
-.simple-login {
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full screen height */
+    min-height: 100vh;
     width: 100%;
     margin: 0;
     background-color: var(--color-main);
 }
 
-/* The Card Styling */
 .login-card {
     background-color: var(--color-primary);
     padding: 3rem;
     border-radius: 20px;
     width: 100%;
-    max-width: 380px; /* Keeps it nice and slim */
+    max-width: 380px; 
     
     text-align: center;
     border: 1px solid var(--color-section);
-    box-shadow: 0 10px 40px rgba(110, 92, 69, 0.15); /* Soft earthy shadow */
-    
-    /* Subtle entrance animation */
+    box-shadow: 0 10px 40px rgba(110, 92, 69, 0.15); 
     animation: appear 0.6s ease-out;
 }
 
@@ -31,7 +27,6 @@
     margin: 0.5rem 0 2rem 0;
 }
 
-/* Inputs */
 .login-card input {
     width: 100%;
     padding: 14px;
@@ -49,7 +44,6 @@
     box-shadow: 0 0 0 4px rgba(110, 92, 69, 0.1);
 }
 
-/* Button */
 .login-card .btn {
     width: 100%;
     margin-top: 10px;
@@ -61,7 +55,6 @@
     transform:scale(1.1);
 }
 
-/* Back Link */
 .back-link {
     display: block;
     margin-top: 25px;

@@ -43,7 +43,6 @@
             })
             .catch((error) => console.error("Error loading projects:", error));
 
-        // Profile menu logic remains here (it works fine outside because the header is static)
         const profileMenu = document.getElementById('profile');
         if (profileMenu) {
             profileMenu.addEventListener('click', (event) => {

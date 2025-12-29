@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script>
+        //Am nevoie de asta din cauza cache-ului de la browser
+        window.addEventListener('pageshow', (event) => {
+            if(localStorage.getItem("logged") !== "true"){
+                window.location.replace("./auth/login/login.html");
+            }
+        });
         if(localStorage.getItem("logged") !== "true"){
-            // .replace() prevents the user from clicking "Back" to return to this page
             window.location.replace("./auth/login/login.html");
         }
     </script>
