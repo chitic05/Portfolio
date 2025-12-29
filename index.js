@@ -21,8 +21,3 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href="./auth/login/login.html";
             });
         });
-
-function disconnect(){
-    localStorage.setItem("logged", "false");
-    console.log(localStorage.getItem("logged"));
-}
