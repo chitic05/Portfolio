@@ -20,6 +20,9 @@
             localStorage.setItem("db", JSON.stringify(dataBase));
             localStorage.setItem("dbInit", "true");
         }
+        if(localStorage.getItem("logged") === "true"){
+            window.location.replace("../../index.html");
+        }
     </script>
 </head>
 <body class="simple-login">
