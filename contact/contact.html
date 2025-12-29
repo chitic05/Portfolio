@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        if(localStorage.getItem("logged") !== "true"){
+            // .replace() prevents the user from clicking "Back" to return to this page
+            window.location.replace("../auth/login/login.html");
+        } else {
+            // Optional: If logged in, you can make the body visible here if you hid it in CSS
+            document.documentElement.style.visibility = 'visible';
+        }
+    </script>
     <title>Chitic David</title>
 </head>
 <body>
@@ -18,6 +27,7 @@
                 <a href="../index.html">Home</a>
                 <a href="../projects/projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
+                <a href="../auth/login/login.html" id="logOut">Log out</a>
             </div>
         </div>
 

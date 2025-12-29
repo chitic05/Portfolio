@@ -1,0 +1,77 @@
+/* Reset the body to be a simple flex container */
+.simple-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full screen height */
+    width: 100%;
+    margin: 0;
+    background-color: var(--color-main);
+}
+
+/* The Card Styling */
+.login-card {
+    background-color: var(--color-primary);
+    padding: 3rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 380px; /* Keeps it nice and slim */
+    
+    text-align: center;
+    border: 1px solid var(--color-section);
+    box-shadow: 0 10px 40px rgba(110, 92, 69, 0.15); /* Soft earthy shadow */
+    
+    /* Subtle entrance animation */
+    animation: appear 0.6s ease-out;
+}
+
+.login-card h2 {
+    color: var(--color-darker);
+    font-size: 2rem;
+    margin: 0.5rem 0 2rem 0;
+}
+
+/* Inputs */
+.login-card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1.5px solid var(--color-section);
+    border-radius: 10px;
+    background: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.login-card input:focus {
+    border-color: var(--color-darker);
+    box-shadow: 0 0 0 4px rgba(110, 92, 69, 0.1);
+}
+
+/* Button */
+.login-card .btn {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+}
+.login-card .btn:hover{
+    transform:scale(1.1);
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    margin-top: 25px;
+    color: var(--color-darker);
+    text-decoration: none;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 1;
+}

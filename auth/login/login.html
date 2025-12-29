@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        if(localStorage.getItem("dbInit") !== "true"){
+            const dataBase = {
+                users:[
+                    {
+                     email: "admin@a",
+                     password: "admin"
+                    }
+                ]
+            }
+            localStorage.setItem("db", JSON.stringify(dataBase));
+            localStorage.setItem("dbInit", "true");
+        }
+        if(localStorage.getItem("logged") === "true"){
+            window.location.href="../../index.html";
+        }
+    </script>
+    <title>Login | David-Alexandru Chitic</title>
+</head>
+<body class="simple-login">
+    
+    <div class="login-card">
+        <h2>Login</h2>
+        
+        <form>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <button type="submit" class="btn" id="projects">Sign In</button>
+        </form>
+
+        <a href="../register/register.html" class="back-link">Register</a>
+    </div>
+    <script src="./login.js"></script>
+</body>
+</html>
