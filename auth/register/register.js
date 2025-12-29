@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             db.users.push(newUser);
             localStorage.setItem("db", JSON.stringify(db));
             localStorage.setItem("logged", "true");
-            window.location.href = "../../index.html"; 
+            window.location.replace("../../index.html"); 
         } 
         else {
             alert("Passwords are not matching!");

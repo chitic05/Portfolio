@@ -10,7 +10,7 @@ form.addEventListener("submit",(e) =>{
             if (userFound) {
                 console.log("Login Success!");
                 localStorage.setItem("logged", "true");
-                window.location.href = "../../index.html"; 
+                window.location.replace("../../index.html"); 
             }else {
                alert("Invalid email or password");
             }

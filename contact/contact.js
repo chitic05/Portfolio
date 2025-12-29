@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const logOut=document.getElementById("logOut");
     logOut.addEventListener("click", ()=>{
         localStorage.setItem("logged","false");
-        window.location.href="../auth/login/login.html";
+        window.location.replace("../auth/login/login.html");
     });
 
     const form = document.querySelector(".contact-form");
