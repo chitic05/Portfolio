@@ -15,9 +15,4 @@ document.addEventListener('DOMContentLoaded', () => {
                     profileMenu.classList.remove('menu-open');
                 }
             });
-            const logOut=document.getElementById("logOut");
-            logOut.addEventListener("click", ()=>{
-                localStorage.setItem("logged","false");
-                window.location.replace("./auth/login/login.html");
-            });
         });

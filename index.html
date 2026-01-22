@@ -5,17 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        //Am nevoie de asta din cauza cache-ului de la browser
-        window.addEventListener('pageshow', (event) => {
-            if(localStorage.getItem("logged") !== "true"){
-                window.location.replace("./auth/login/login.html");
-            }
-        });
-        if(localStorage.getItem("logged") !== "true"){
-            window.location.replace("./auth/login/login.html");
-        }
-    </script>
+    <script src="index.js"></script>
     <title>Chitic David</title>
 </head>
 <body>
@@ -29,8 +19,6 @@
                 <a href="./index.html">Home</a>
                 <a href="./projects/projects.html">Projects</a>
                 <a href="./contact/contact.html">Contact</a>
-                <a href="./auth/login/login.html" id="logOut">Log out</a>
-
             </div>
         </div>
 
@@ -84,6 +72,5 @@
             © 2025 David-Alexandru Chitic. All rights reserved.
         </div>
     </footer>
-    <script src="index.js"></script>
 </body>
 </html>
