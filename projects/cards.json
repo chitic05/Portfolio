@@ -1,5 +1,11 @@
 {
     "cards": [
+    	{
+    	    "name": "x86 Assembly Movfuscator & Interpreter",
+	    "technologies": "C++, x86 Assembly",
+	    "description": "Built a virtual x86 CPU emulator supporting registers, flags, stack, and memory.\nImplemented parsing and execution of core x86 instructions (arithmetic, bitwise, control flow).\nDesigned a partial evaluation system that simulates execution and rewrites assembly using computed register values.\nSupported complex addressing modes and label resolution across .data and .text sections.",
+	    "link": "https://github.com/chitic05/MovFuscator"
+    	},
         {
             "name": "2D Platformer Game",
             "technologies": "C++, SDL3",
@@ -7,16 +13,16 @@
             "link": "https://github.com/chitic05/SDL3-game"
         },
         {
-            "name": "Spotify Extra Features App",
-            "technologies": "Python",
-            "description": "Added multiple features via the Spotify Web API.\nImplemented HTTPS requests for real-time interaction.",
-            "link": "https://github.com/chitic05/SpotifyExtraFeatures"
-        },
-        {
             "name": "Bluetooth Controlled Mini Car",
             "technologies": "ESP32, C++, Android Studio",
             "description": "Designed & built a DC + servo motor minicar.\nCreated an Android app using Bluetooth SPP.\nProgrammed ESP32 to parse packets & control motors.",
             "link": "https://github.com/chitic05/Embedded-Mini-Car"
+        },
+        {
+            "name": "Spotify Extra Features App",
+            "technologies": "Python",
+            "description": "Added multiple features via the Spotify Web API.\nImplemented HTTPS requests for real-time interaction.",
+            "link": "https://github.com/chitic05/SpotifyExtraFeatures"
         },
         {
             "name": "Realtime Chat Application",
