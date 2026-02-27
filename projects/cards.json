@@ -21,7 +21,7 @@
         {
             "name": "Library Management System",
             "technologies": "C++, CMake, nlohmann/json",
-            "description": "Developed a modular console-based library management system in modern C++17.\nImplemented CRUD operations with JSON persistence and referential integrity.\nDesigned transactional checkout/return logic preventing inconsistent states.\nStructured the project using clean architecture and separation of concerns.",
+            "description": "Developed a modular console-based library management system in modern C++17.\nImplemented CRUD operations with JSON persistence and referential integrity.\nDesigned transactional checkout/return logic preventing inconsistent states.\nStructured the project using object-oriented design, clean architecture, and separation of concerns.",
             "link":
 "https://github.com/chitic05/LibraryManager"
         },
